@@ -1,0 +1,17 @@
+
+import  urllibs
+
+headers ={ 'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 '
+                        '(KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'
+}
+
+def getTypeList(pn=1): # get the  classficy  list  function
+    req= urllib.request('http://www.quanshuwang.com/map/%s.html' %pn) # instance request object
+    req.headers=headers #replace the headers
+    res=urllib.urlopen(req)  #  start to request
+    html=res.read().decode('gbk').encode('utf-8') # get the resourse of the webpage and  change the gbk to unicode
+    return  html
+
+StartEnd=input("please input the order:")
+if StartEnd=='start' :
+    print (getTypeList())
