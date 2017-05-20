@@ -1,0 +1,19 @@
+alanAge=30
+gussAge=int(input("gussAge:"))
+while gussAge>alanAge:
+    print("think smaller")
+    gussAge = int(input("gussAge:"))
+while  gussAge<alanAge:
+    print("think bigger")
+    gussAge = int(input("gussAge:"))
+while gussAge==alanAge:
+    print("Great!")
+    break
+
+"""
+elif gussAge<alanAge:
+    print("think bigger")
+else :
+    print("Great!")
+
+"""
